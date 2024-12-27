@@ -1,0 +1,44 @@
+.card-container {
+  perspective: 1000px;
+}
+
+.card-body {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 24px;
+  position: relative;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.card-subtitle {
+  font-size: 0.875rem;
+  color: #a1a1a1;
+}
+
+.card-image {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.card-button.primary {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.card-button.secondary {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
