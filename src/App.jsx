@@ -1,14 +1,8 @@
 import { BrowserRouter } from 'react-router-dom';
-import {
-  Contact,
-  Hero1,
-  Navbar,
-  StarsCanvas,
-  Overview,
-  ThreeDCard,
-} from './components';
+import { Contact, Hero1, Navbar, StarsCanvas, ThreeDCard } from './components';
 import Marquees from './components/mycom/Marquees';
 import Particles from './components/ui/particles';
+import Overview1 from './components/mycom/Overview1';
 
 const App = () => {
   return (
@@ -18,13 +12,16 @@ const App = () => {
           <Navbar />
           <Hero1></Hero1>
         </div>
-        <div className="relative z-0">
-          <Overview></Overview>
+        <div className="relative mt-0 z-0">
+          <Overview1></Overview1>
           <Marquees></Marquees>
           <Particles></Particles>
-          <StarsCanvas />
         </div>
-        <ThreeDCard></ThreeDCard>
+        <div>
+          <Particles></Particles>
+          <ThreeDCard></ThreeDCard>
+          <Particles></Particles>
+        </div>
         <div className="relative z-0">
           <Contact />
           <StarsCanvas />

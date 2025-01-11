@@ -39,11 +39,11 @@ const Overview = () => {
   return (
     <div className="flex flex-col gap-0">
       <div className="relative flex items-center justify-center overflow-hidden  ">
-        <section className="relative mt-14 z-10 flex flex-col items-center justify-center text-white p-2 ">
+        <section className="relative mt-1 z-10 flex flex-col items-center justify-center text-white p-2 ">
           <AnimatedGradientText>
             <span
               className={cn(
-                `text-5xl p-1 font-bold inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`
+                `max-sm:text-lg text-2xl md:text-3xl lg:text-4xl xl:text-5xl p-1 font-bold inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`
               )}
             >
               About Me - MERN Stack Developer

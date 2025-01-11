@@ -3,16 +3,12 @@
   width: 500px;
   height: 400.05px;
   border-radius: 100%;
-  background: linear-gradient(
-    118.19deg,
-    #1fa2ff -3.62%,
-    #12d8fa 50.44%,
-    #a6ffcb 104.51%
-  );
-  opacity: 0.3;
+  background: linear-gradient(118.19deg, #1fa2ff -3.62%, #DD4BAE 50.44%, #9B4FE6 104.51%);
+  opacity: 0.1;
   filter: blur(34px);
   transform: matrix(1, 0, -0.03, 1, 0, 0);
   will-change: transform, opacity;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .code-container {
@@ -21,10 +17,17 @@
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  background: #1e1e1e;
+  padding: 20px;
 }
 
 .header-bar {
   border-bottom: 1px solid #444;
+  padding: 10px 0;
+  background: #2d2d2d;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
 }
 
 .keyword {
@@ -58,6 +61,7 @@ code:after {
 }
 
 @keyframes blink {
+
   0%,
   50% {
     opacity: 1;
@@ -68,6 +72,7 @@ code:after {
     opacity: 0;
   }
 }
+
 /* Base styles for large screens */
 .green-pink-gradient {
   background: linear-gradient(135deg, #6e48aa, #9d50bb);
@@ -118,13 +123,17 @@ code:after {
     font-size: 0.8rem;
   }
 }
+
 /* Hide scrollbar for all browsers */
 .code-content {
   overflow: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
 }
 
 .code-content::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, and Opera */
+  display: none;
+  /* Chrome, Safari, and Opera */
 }

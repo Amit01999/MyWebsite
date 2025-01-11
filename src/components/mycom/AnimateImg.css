@@ -1,0 +1,66 @@
+.abhishek {
+  color: rgba(255, 255, 255, 0.8);
+  /* background: #3085d6; */
+  padding: 10px;
+  margin: auto;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.abhishek:hover {
+  color: white;
+  box-shadow: 0 5px 15px #afe0f5;
+}
+
+.hero-animation {
+  animation: hero 4s ease-in-out infinite;
+}
+
+.bgamit {
+  background-image: url('../../assets/company/amit1.png');
+}
+
+.bgamit:hover {
+  background-image: url('../../assets/amit-avatar.png');
+  background-size: cover;
+}
+
+.Abhishekbg:hover {
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+
+  -webkit-box-shadow: 0px 0px 100px 0px rgba(254, 255, 253, 0.862);
+  -moz-box-shadow: 0px 0px 100px 0px rgb(255, 255, 255);
+  box-shadow: 0px 0px 100px 0px rgb(51, 65, 211);
+}
+
+@keyframes hero {
+
+  0%,
+  100% {
+    transform: translateY(-1%);
+    animation-timing-function: cubic-bezier(0.8, 1, 1, 1);
+  }
+
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@keyframes hero {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 45% 75% 85% 55%/65% 75% 45% 75%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}

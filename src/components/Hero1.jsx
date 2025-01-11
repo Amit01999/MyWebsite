@@ -1,41 +1,62 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import TypeWriter from 'typewriter-effect';
 import CodeInfo from './CodeInfo';
 import FlickeringGrid from './ui/flickering-grid';
 
-export default function Component() {
+import {
+  BsTwitter,
+  BsGithub,
+  BsDiscord,
+  BsInstagram,
+  BsLinkedin,
+} from 'react-icons/bs';
+
+export default function ResponsivePortfolio() {
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== 'undefined' ? window.innerWidth : 0
+  );
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const onButtonClick = () => {
     const link = document.createElement('a');
-    link.href = '/resume.pdf';
+    link.href = '/Amit-Resume.pdf';
     link.download = 'resume.pdf';
     link.click();
   };
 
   return (
-    <section className="relative w-full min-h-screen text-white overflow-hidden px-4 py-16 sm:px-6 sm:py-20 lg:py-25">
+    <section className="relative w-full min-h-screen text-white overflow-hidden px-4 sm:px-6 py-8 lg:py-12">
       {/* Background */}
       <FlickeringGrid
-        className="z-0 absolute inset-0 size-full"
-        squareSize={4}
-        gridGap={15}
+        className="z-0 absolute inset-0 w-full h-full"
+        squareSize={windowWidth < 640 ? 2 : 4}
+        gridGap={windowWidth < 640 ? 10 : 15}
         color="#AD54F0"
         maxOpacity={0.5}
         flickerChance={0.1}
-        height={800}
-        width={2000}
+        height={windowWidth >= 1024 ? 850 : 1050}
+        width={windowWidth}
       />
 
-      <div className="relative container w-full max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-5 lg:px-8 z-10">
+      <div className="relative container lg:mt-5 h-fit w-full max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-center lg:gap-12 z-10">
         {/* Left Part */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="w-full lg:w-[45%] mb-6 sm:mt-5 max-sm:mt-8  lg:mb-0 flex flex-col items-center lg:items-start text-center lg:text-left"
+          className="w-full h-[50%] lg:w-2/5 flex flex-col items-center lg:items-start text-center lg:text-left"
         >
-          <div className="relative">
-            <div className="absolute left-0 ml-[-18px] top-0 w-2 h-24 bg-gradient-to-b from-purple-500 to-transparent"></div>
+          <div className="relative  mt-20 lg:mt-2">
+            <div className=" absolute left-0 -ml-8 -top-4 flex flex-col justify-center items-center mt-5">
+              <div className="w-5 h-5 rounded-full bg-[#915eff]"></div>
+              <div className="w-1 sm:h-72 h-52 violet-gradient"></div>
+            </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
               Hi, I&apos;m{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
@@ -72,6 +93,34 @@ export default function Component() {
               </svg>
               Download Resume
             </button>
+            <div className="flex justify-center lg:justify-start gap-4 sm:gap-6 md:gap-8 items-center mt-8 md:mt-10 mb-10 lg:mb-0">
+              {[
+                {
+                  Icon: BsLinkedin,
+                  href: 'https://www.linkedin.com/in/amit-kumar-bishwas/',
+                },
+                { Icon: BsGithub, href: 'https://github.com/Amit01999' },
+                { Icon: BsTwitter, href: 'https://x.com/Amitkum00343781' },
+                {
+                  Icon: BsDiscord,
+                  href: 'https://discordapp.com/users/1313879326785011835',
+                },
+                {
+                  Icon: BsInstagram,
+                  href: 'https://www.instagram.com/amit_srkar/',
+                },
+              ].map(({ Icon, href }, index) => (
+                <a
+                  key={index}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={href}
+                  className="text-2xl sm:text-3xl md:text-4xl hover:text-purple-400 transition-colors duration-200"
+                >
+                  <Icon />
+                </a>
+              ))}
+            </div>
           </div>
         </motion.div>
 
@@ -80,7 +129,7 @@ export default function Component() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="lg:w-[45%]"
+          className="h-[50%] lg:mt-10 lg:w-3/5"
         >
           <CodeInfo />
         </motion.div>
