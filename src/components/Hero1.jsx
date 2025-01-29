@@ -97,7 +97,7 @@ export default function ResponsivePortfolio() {
               {[
                 {
                   Icon: BsLinkedin,
-                  href: 'https://www.linkedin.com/in/amit-kumar-bishwas-2ba98818b/',
+                  href: 'https://www.linkedin.com/in/amit-bishwas-3359a7230/',
                 },
                 { Icon: BsGithub, href: 'https://github.com/Amit01999' },
                 { Icon: BsTwitter, href: 'https://x.com/Amitkum00343781' },

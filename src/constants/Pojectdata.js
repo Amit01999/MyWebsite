@@ -4,6 +4,8 @@ import p3 from '../assets/projects/p3.png';
 import p4 from '../assets/projects/p4.png';
 import p5 from '../assets/projects/p5.png';
 import p6 from '../assets/projects/p6.png';
+import p7 from '../assets/projects/p7.png';
+import p9 from '../assets/projects/p9.png';
 
 export const cardData = [
   {
@@ -131,6 +133,70 @@ export const cardData = [
     ],
     link: 'https://wanderplace-gxnn.onrender.com/',
     git: 'https://github.com/Amit01999/WanderPlace/tree/main',
+  },
+  {
+    title: 'MysteryDrop',
+    subtitle:
+      'This project is a web application built with Next.js that allows users to create a dashboard to receive anonymous messages via a unique URL.',
+    image: p9,
+    tags: [
+      {
+        name: 'Next.js',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'TypeScript',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'MongoDB',
+        color: 'orange-text-gradient',
+      },
+      {
+        name: 'next-auth',
+        color: 'orange-text-gradient',
+      },
+      {
+        name: 'TailwindCSS',
+        color: 'pink-text-gradient',
+      },
+      {
+        name: 'shadcn',
+        color: 'blue-text-gradient',
+      },
+    ],
+    link: 'https://mystery-drop-tau.vercel.app/',
+    git: 'https://github.com/Amit01999/MysteryDrop/tree/main',
+  },
+  {
+    title: 'MusicVerse',
+    subtitle:
+      'It is designed to promote the academy, attract potential students, and provide information about the courses, instructors, and events.',
+    image: p7,
+    tags: [
+      {
+        name: 'Next.js',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'TypeScript',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'GSAP',
+        color: 'orange-text-gradient',
+      },
+      {
+        name: 'TailwindCSS',
+        color: 'pink-text-gradient',
+      },
+      {
+        name: 'shadcn',
+        color: 'blue-text-gradient',
+      },
+    ],
+    link: 'https://music-verse-nine.vercel.app/',
+    git: 'https://github.com/Amit01999/MusicVerse',
   },
   {
     title: 'NetflixGPT',
